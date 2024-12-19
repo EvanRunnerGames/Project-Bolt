@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'fortnite'; /* Name your font family */
+    src: url('Fortnite.ttf'); /* Correct the path to your font file */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#43a4f1, #193dad) !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+* {
+    font-family: 'fortnite', sans-serif; /* Use the font family */
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 10;
+}
+
+header a {
+    margin: 15px;
+    padding: 15px;
+    font-size: 20px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+header a:hover {
+    cursor: pointer;
+}
+
+.header-space {
+    width: 100%;
+    margin: 60px;
+}
+
+.home-info {
+    width: 600px;
+    display:           flex;
+    justify-content: center;
+    align-items:     center;
+    flex-direction:  column;
+    margin: 20px;
+}
+
+.home-img {
+    width: 100%;
+}
+
+.home-description {
+    margin-top: 16px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.header-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    margin: 20px;
+}
+
+.header-b img {
+    position: absolute;
+    z-index: -9;
+}
+
+.header-b a {
+    color: black;
+}
