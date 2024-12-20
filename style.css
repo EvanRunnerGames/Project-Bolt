@@ -53,10 +53,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     background-image: url("media/item-shop-bg.webp");
     background-position: center;
     background-size: 100%;
+}
+
+.rpurple {
+    background: linear-gradient(to right, #602f98, #b35be2, #602f98) !important;
+    border: #a05eb9 solid 4px !important;
+}
+
+.rnpurple {
+    font-size: 40px !important;
+    background: linear-gradient(to bottom, white, #fbdcfd) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent !important;
 }
 
 .item-price {
@@ -71,16 +85,25 @@ a {
     z-index: 4; /* Ensure it stacks above .item-img */
 }
 
-.item-name {
+.item-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    font-size: 40px;
     background-color: #18345a72;
     position: relative;
     z-index: 2; /* Below .item-img */
+
+}
+
+.item-name {
+    font-size: 40px;
+    background: linear-gradient(to bottom, white, #d3f6fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .item-img-container {
@@ -98,9 +121,10 @@ a {
 }
 
 .item {
+
     position: relative;
-    width: 400px;
-    height: 800px !important;
+    width: 430px;
+    height: 780px;
     background: linear-gradient(to right, #17417e, #3791d7, #17417e);
     border: #56a3d1 solid 4px;
     display: flex;
@@ -108,11 +132,24 @@ a {
     align-items: center;
     flex-direction: column;
     overflow: hidden;
+    transform: scale(0.8);
     cursor: pointer;
+    transition: all 0.18s ease-in-out;
 }
 
-.item img {
+.item:hover {
+    outline: solid #f3db23; /* Add 'solid' as the outline-style */
+    outline-width: 6px; /* Outline width remains as specified */
+}
+
+.item:hover .item-img {
+    transform: translateY(100px);
+}
+
+
+.item-img {
     z-index: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .item-details {
