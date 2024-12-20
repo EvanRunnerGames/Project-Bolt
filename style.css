@@ -67,6 +67,32 @@ a {
     user-select: none;         /* Standard syntax */
 }
 
+.item-shop-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item-shop-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1010px;
+    height: 60px;
+    background-color: rgba(128, 128, 128, 0.467);
+    transform: translateY(-100px);
+    color: white;
+    font-family: "Roboto";
+}
+
+.item-shop-note b {
+    font-family: "Roboto";
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
 .rpurple {
     background: linear-gradient(to right, #602f98, #b35be2, #602f98) !important;
     border: #a05eb9 solid 4px !important;
