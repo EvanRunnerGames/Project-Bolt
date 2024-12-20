@@ -61,6 +61,10 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Standard syntax */
 }
 
 .rpurple {
@@ -76,6 +80,15 @@ a {
 .rnpurple {
     font-size: 40px !important;
     background: linear-gradient(to bottom, white, #fbdcfd) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent !important;
+}
+
+.rngreen {
+    font-size: 40px !important;
+    background: linear-gradient(to bottom, white, #87bb85) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
@@ -130,20 +143,14 @@ a {
     white-space: nowrap;
 }
 
-.levelrpurple {
-    background: linear-gradient(to bottom, white, #fbdcfd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-}
-
 .item-season-level {
     font-family: "Roboto";
     font-weight: bolder;
     position: absolute;
     font-size: 18px !important;
     bottom: 0;
+
+    opacity: 0.8;
 
     background: linear-gradient(to bottom, white, #d3f6fb);
     -webkit-background-clip: text;
