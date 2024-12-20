@@ -57,8 +57,72 @@ a {
     background-image: url("media/item-shop-bg.webp");
     background-position: center;
     background-size: 100%;
-
 }
+
+.item-price {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    background-color: #080424;
+    height: 70px;
+    position: relative; /* Add relative positioning for z-index to work */
+    z-index: 4; /* Ensure it stacks above .item-img */
+}
+
+.item-name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 40px;
+    background-color: #18345a72;
+    position: relative;
+    z-index: 2; /* Below .item-img */
+}
+
+.item-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-img {
+    text-align: center;
+    transform: translateY(110px);
+    position: relative;
+    z-index: 3; /* Above .item-name but below .item-price */
+}
+
+.item {
+    position: relative;
+    width: 400px;
+    height: 800px !important;
+    background: linear-gradient(to right, #17417e, #3791d7, #17417e);
+    border: #56a3d1 solid 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.item img {
+    z-index: 0;
+}
+
+.item-details {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 100000;
+}
+
+
 
 .news-button {
     position: relative;
