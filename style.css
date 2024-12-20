@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @font-face {
     font-family: 'fortnite'; /* Name your font family */
     src: url('Fortnite.ttf'); /* Correct the path to your font file */
@@ -73,8 +75,16 @@ a {
     text-fill-color: transparent !important;
 }
 
+.item-picaxe {
+    width: fit-content;
+    height: 650px;
+}
+
 .item-price {
     width: 100%;
+    font-family: "Roboto", serif;
+    font-weight: bolder;
+    font-style: normal;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +100,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    flex-direction: column;
+    height: 120px;
     background-color: #18345a72;
     position: relative;
     z-index: 2; /* Below .item-img */
@@ -99,6 +110,30 @@ a {
 
 .item-name {
     font-size: 40px;
+    background: linear-gradient(to bottom, white, #d3f6fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.levelrpurple {
+    background: linear-gradient(to bottom, white, #fbdcfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.item-season-level {
+    font-family: "Roboto";
+    font-weight: bolder;
+    position: absolute;
+    font-size: 18px !important;
+    bottom: 0;
+
     background: linear-gradient(to bottom, white, #d3f6fb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -115,7 +150,7 @@ a {
 
 .item-img {
     text-align: center;
-    transform: translateY(110px);
+    transform: translateY(130px);
     position: relative;
     z-index: 3; /* Above .item-name but below .item-price */
 }
@@ -143,7 +178,7 @@ a {
 }
 
 .item:hover .item-img {
-    transform: translateY(100px);
+    transform: translateY(120px);
 }
 
 
