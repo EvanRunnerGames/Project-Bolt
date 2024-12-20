@@ -34,7 +34,8 @@ a {
     height: 100vh;
     background-color: #14151b;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .content {
@@ -79,7 +80,7 @@ a {
 
 .sidebar-link {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 43px;
     height: 43px;
     border-radius: 6px;
