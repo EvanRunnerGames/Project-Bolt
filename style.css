@@ -19,6 +19,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
+    overflow-x: hidden;
 }
 
 a {
@@ -58,12 +59,18 @@ a {
     flex-direction: row;
     background-image: url("media/item-shop-bg.webp");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .rpurple {
     background: linear-gradient(to right, #602f98, #b35be2, #602f98) !important;
     border: #a05eb9 solid 4px !important;
+}
+
+.rgreen {
+    background: linear-gradient(to right, #25651d, #59a237, #25651d) !important;
+    border: #88cf5c solid 4px !important;
 }
 
 .rnpurple {
@@ -117,6 +124,10 @@ a {
     text-fill-color: transparent;
     padding: 0;
     margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .levelrpurple {
@@ -155,10 +166,20 @@ a {
     z-index: 3; /* Above .item-name but below .item-price */
 }
 
-.item {
+.items {
+    transform: scale(0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
+.item {
     position: relative;
-    width: 430px;
+    width: 430px !important;
+    min-width: 430px;
+    max-width: 430px;
     height: 780px;
     background: linear-gradient(to right, #17417e, #3791d7, #17417e);
     border: #56a3d1 solid 4px;
@@ -167,9 +188,9 @@ a {
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-    transform: scale(0.8);
     cursor: pointer;
     transition: all 0.18s ease-in-out;
+    margin: 10px;
 }
 
 .item:hover {
