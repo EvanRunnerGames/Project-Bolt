@@ -10,12 +10,13 @@ html, body {
 }
 
 body {
-    background: linear-gradient(#43a4f1, #193dad) !important;
+    /*background: linear-gradient(#43a4f1, #193dad);*/
+    background-color: #0c0d10 !important;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 a {
@@ -25,70 +26,75 @@ a {
 * {
     font-family: 'fortnite', sans-serif; /* Use the font family */
     color: white;
+    font-weight: normal;
 }
 
-header {
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background-color: #14151b;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
     width: 100%;
-    height: 60px;
-    position: fixed;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.news-button {
+    position: relative;
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    z-index: 10;
-}
-
-header p {
-    margin: 15px;
-    padding: 15px;
-    font-size: 20px;
-    background-color: transparent;
-    color: black;
     transition: all 0.3s ease-in-out;
 }
 
-header p:hover {
-    cursor: pointer;
-}
-
-.header-space {
+.news-img {
     width: 100%;
-    margin: 60px;
+    height: max-content;
+    transition: all 0.3s ease-in-out;
 }
 
-.home-info {
-    width: 600px;
-    display:           flex;
-    justify-content: center;
-    align-items:     center;
-    flex-direction:  column;
-    margin: 20px;
+.news-button:hover .news-img {
+    transform: scale(1.05);
 }
 
-.home-img {
-    width: 100%;
+.news-button-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(30px);
 }
 
-.home-description {
-    margin-top: 16px;
-    width: 100%;
-    font-size: 18px;
-    text-align: center;
-}
-
-.header-b {
+.sidebar-link {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 43px;
+    height: 43px;
+    border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
-    margin: 20px;
+    transition: all 0.18s ease-in-out;
 }
 
-.header-b img {
-    position: absolute;
-    z-index: -9;
+.sidebar-link:hover {
+    background-color: #2c2d3b;
+    cursor: pointer;
 }
 
-.header-b a {
-    color: black;
+.sidebar-link img {
+    width: 17px;
+    height: 20px;
 }
