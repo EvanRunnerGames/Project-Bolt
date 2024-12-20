@@ -77,6 +77,19 @@ a {
     border: #88cf5c solid 4px !important;
 }
 
+.rgreen:hover {
+    background: linear-gradient(to right, #25651d, #80a464, #25651d) !important;
+}
+
+.item:hover .rgreen {
+    background: linear-gradient(to right, #25651d, #97ff67, #25651d) !important;
+}
+
+.rpurple:hover {
+    background: linear-gradient(to right, #602f98, #c088e0, #602f98) !important;
+}
+
+
 .rnpurple {
     font-size: 40px !important;
     background: linear-gradient(to bottom, white, #fbdcfd) !important;
@@ -224,13 +237,14 @@ a {
     flex-direction: column;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.18s ease-in-out;
     margin: 10px;
+    transition: all 0.18s ease-in-out;
 }
 
 .item:hover {
     outline: solid #f3db23; /* Add 'solid' as the outline-style */
-    outline-width: 6px; /* Outline width remains as specified */
+    outline-width: 8px; /* Outline width remains as specified */
+    background: linear-gradient(to right, #17417e, #68acdc, #17417e);
 }
 
 .item:hover .item-img {
